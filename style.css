@@ -26,24 +26,96 @@ body {
 .sidebar {
   background-color: var(--secondary-color);
   color: var(--text-color);
-  border: red solid 2px;
   grid-column: 0 / 1;
   grid-row-end: span 4;
   padding: 10%;
 }
 
+ul li {
+  display: flex;
+  justify-content: left;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  margin-right: 40px;
+}
+
 .menu,
 .other {
-  line-height: 30px;
   margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
 
+  li {
+    margin-top: 25px;
+    margin-left: 25px;
+  }
   li:hover {
     color: var(--accent-colo);
   }
 }
 
+.top {
+  display: flex;
+  margin-top: 20px;
+}
+
+.top-right {
+  margin: 5px 30px 0 auto;
+}
+
+h2 {
+  margin-right: 120px;
+}
+
+.bot {
+  display: flex;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5%;
+
+  input {
+    border: 1px solid var(--accent-colo);
+    box-shadow: 5px 2px 2px var(--accent-colo);
+    width: 400px;
+    border-radius: 30px;
+    height: 26px;
+    padding-left: 10px;
+  }
+}
+
+span {
+  font-style: thin;
+  font-size: 1rem;
+}
+
+h1 {
+  margin: 0 auto 15px 90px;
+}
+
+.buttons {
+  margin: auto 75px auto 0;
+  button {
+    margin: 0 9px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 2px 2px 2px var(--accent-colo);
+    width: 74px;
+    height: 24px;
+  }
+  button:hover {
+    background-color: var(--main-color);
+  }
+}
+
 .header {
-  background-color: var(--accent-colo);
   grid-column: 2;
 }
 
@@ -51,4 +123,61 @@ body {
   background-color: var(--main-color);
   color: var(--text-color);
   grid-column: 2;
+  display: grid;
+  grid-template-columns: 78% 20%;
+  gap: 20px;
+  padding: 36px 15px 0 36px;
+}
+
+.projects {
+  grid-column: 1;
+
+  h4 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+  }
+
+  .project-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 370px);
+    gap: 20px;
+
+    .card {
+      background-color: whitesmoke;
+      height: 200px;
+      padding: 30px 10px 10px 30px;
+      border-radius: 30px;
+      border: 10px inset var(--accent-colo);
+      border-left-color: burlywood;
+      border-style: none none none groove;
+
+      h5 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+.trending,
+.announcements {
+  margin-top: 50px;
+  background-color: whitesmoke;
+  font-size: 0.8rem;
+  padding: 20px;
+  border: 10px inset var(--accent-colo);
+  border-style: none none none groove;
+  border-radius: 30px;
+
+  h4 {
+    font-size: 1.3rem;
+  }
+}
+
+h6 {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.announcements > p {
+  text-align: justify;
 }
